@@ -1,0 +1,61 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background: transparent;
+}
+.card {
+  border-radius: 10px;
+}
+.head {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: transparent;
+}
+.user-card {
+  width: 250px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #ffffff;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 0 5px rgba(128, 128, 128, 0.2);
+  transition: all 0.2s ease-in-out;
+  color: rgba(47, 47, 47, 0.9);
+}
+.user-card p {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.userimg {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+button.viewprofile {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background: linear-gradient(
+    90deg,
+    rgb(67, 138, 185),
+    rgba(67, 138, 185, 0.7),
+    rgb(67, 138, 185)
+  );
+  transition: all 0.2s ease-in-out;
+}
+button:hover {
+  filter: brightness(120%);
+  scale: 105%;
+}
