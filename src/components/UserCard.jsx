@@ -6,7 +6,7 @@ function UserCard({ user }) {
     <div className="card user-card">
       <div className="userimg">
         <img
-          src={`https://api.lorem.space/image/face?w=150&h=150&hash=${user.username}`}
+          src={`https://api.lorem.space/image/face?w=150&h=150&hash=${user.id}`}
           alt=""
         />
       </div>
@@ -19,7 +19,9 @@ function UserCard({ user }) {
         <Mail size={20} />
         {user.email}
       </p>
-      <button className="viewprofile card">View Profile</button>
+      <Link className="viewprofile card" to={`/user/${user.id}`}>
+        View Profile
+      </Link>
     </div>
   );
 }

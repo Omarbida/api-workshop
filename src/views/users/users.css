@@ -43,10 +43,11 @@
   border-radius: 50%;
   overflow: hidden;
 }
-button.viewprofile {
+a.viewprofile {
   padding: 10px;
   width: 100%;
   border: none;
+  text-decoration: none;
   background: linear-gradient(
     90deg,
     rgb(67, 138, 185),
@@ -54,8 +55,11 @@ button.viewprofile {
     rgb(67, 138, 185)
   );
   transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-button:hover {
+a:hover {
   filter: brightness(120%);
   scale: 105%;
 }

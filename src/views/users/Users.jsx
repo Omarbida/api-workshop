@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import UserCard from "../components/UserCard";
-import { fetchUsers } from "../slices/UsersSlice";
+import UserCard from "../../components/UserCard";
+import { fetchUsers } from "../../slices/UsersSlice";
 import "./users.css";
 const Users = () => {
   const usersState = useSelector((state) => state.users);
