@@ -1,0 +1,129 @@
+.post-view-container {
+  padding-top: 50px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.post-view-main-container {
+  width: 600px;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.post-view-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  gap: 20px;
+  background: linear-gradient(
+    90deg,
+    rgb(67, 138, 185),
+    rgba(67, 138, 185, 0.7),
+    rgb(67, 138, 185)
+  );
+  box-shadow: 0 0 5px rgba(128, 128, 128, 0.4);
+}
+.post-view-profile-pic {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.post-view-profile-pic img {
+  height: 100%;
+  width: 100%;
+}
+.post-view-header p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+.post-view-post-info {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 10px;
+  gap: 15px;
+}
+.post-view-post-info p {
+  text-align: center;
+}
+.post-view-post-info h1 {
+  text-align: center;
+}
+.post-controls {
+  width: 100%;
+  display: flex;
+}
+.post-controls button {
+  flex-grow: 1;
+  padding: 10px 0;
+  border: none;
+  background: linear-gradient(
+    90deg,
+    rgb(67, 138, 185),
+    rgba(67, 138, 185, 0.7),
+    rgb(67, 138, 185)
+  );
+}
+.post-controls button:hover {
+  cursor: pointer;
+}
+.post-controls button:hover svg {
+  scale: 1.1;
+  transition: all 0.2s ease-in-out;
+}
+.post-view-comments {
+  width: 600px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.comment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 0 20px 20px 20px;
+  box-shadow: 0 0 5px rgba(128, 128, 128, 0.4);
+}
+.comment-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.comment-prof-pic {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.comment-prof-pic img {
+  height: 100%;
+  width: 100%;
+}
+.comment-head p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+.comment .comment-comment {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 10px;
+  text-justify: justify;
+  color: #000;
+}
