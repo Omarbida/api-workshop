@@ -36,7 +36,7 @@ export const fetchUserProfile = (id) => {
     dispatch(getUserProfile());
     try {
       const userProfile = await fetch(
-        `https://jsonplaceholder.typicode.com/users/${id}`
+        import.meta.env.VITE_BASE_API_URL + `/users/${id}`
       );
       dispatch(getUserProfileSuccess(await userProfile.json()));
     } catch (error) {

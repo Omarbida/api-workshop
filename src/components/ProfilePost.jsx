@@ -5,7 +5,7 @@ function ProfilePost(props) {
     <div className="post paper">
       <div className="post-img">
         <img
-          src={`https://api.lorem.space/image?w=600&h=300&hash=${props.post.id}`}
+          src={`${import.meta.env.VITE_BASE_API_URL_POST_IMG}${props.post.id}`}
           alt=""
         />
       </div>

@@ -29,14 +29,14 @@ function PostView() {
         <div className="post-view-header">
           <div className="post-view-profile-pic">
             <img
-              src={`https://api.lorem.space/image/face?w=150&h=150&hash=${user.id}`}
+              src={`${import.meta.env.VITE_BASE_API_URL_PROFILE_PIC}${user.id}`}
             />
           </div>
           <p>{user.username}</p>
         </div>
         <div className="post-view-img">
           <img
-            src={`https://api.lorem.space/image?w=600&h=300&hash=${postId}`}
+            src={`${import.meta.env.VITE_BASE_API_URL_POST_IMG}${postId}`}
           ></img>
         </div>
         <div className="post-view-post-info">

@@ -34,7 +34,8 @@ export const fetchUsers = () => {
   return async (dispatch, getState) => {
     dispatch(getUsers());
     try {
-      const users = await fetch("https://jsonplaceholder.typicode.com/users");
+      console.log(import.meta.env.VITE_BASE_API_URL);
+      const users = await fetch(import.meta.env.VITE_BASE_API_URL + "/users");
       dispatch(setUsersSuccess(await users.json()));
     } catch {
       dispatch(setUsersFail("error"));

@@ -23,7 +23,7 @@ function Profile() {
       <div className="profile-header paper">
         <div className="profile-img">
           <img
-            src={`https://api.lorem.space/image/face?w=150&h=150&hash=${user.id}`}
+            src={`${import.meta.env.VITE_BASE_API_URL_PROFILE_PIC}${user.id}`}
           />
         </div>
       </div>
