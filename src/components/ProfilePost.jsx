@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function ProfilePost(props) {
   return (
-    <div className="post">
+    <div className="post paper">
       <div className="post-img">
         <img
           src={`https://api.lorem.space/image?w=600&h=300&hash=${props.post.id}`}

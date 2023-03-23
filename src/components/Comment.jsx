@@ -1,6 +1,6 @@
 function Comment(props) {
   return (
-    <div className="comment">
+    <div className="comment paper">
       <div className="comment-head">
         <div className="comment-prof-pic">
           <img
@@ -9,8 +9,8 @@ function Comment(props) {
         </div>
         <p>{props.comment.name}</p>
       </div>
-      <p className="comment-comment">{props.comment.body}</p>
+      <p className="comment-comment paper">{props.comment.body}</p>
     </div>
-  )
+  );
 }
-export default Comment
+export default Comment;

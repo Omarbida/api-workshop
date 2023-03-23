@@ -20,7 +20,7 @@ function Profile() {
   }, [dispatch, userId]);
   return (
     <div className="profile-container">
-      <div className="profile-header">
+      <div className="profile-header paper">
         <div className="profile-img">
           <img
             src={`https://api.lorem.space/image/face?w=150&h=150&hash=${user.id}`}
@@ -28,7 +28,7 @@ function Profile() {
         </div>
       </div>
       <div className="profile-main-container">
-        <div className="profile-info ">
+        <div className="profile-info paper">
           <p>
             <User size={20} /> {user.username}
           </p>
