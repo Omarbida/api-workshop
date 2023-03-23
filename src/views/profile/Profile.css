@@ -37,7 +37,7 @@
   width: 100%;
 }
 .profile-main-container {
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -56,7 +56,7 @@
   flex-direction: column;
 }
 .post .post-img {
-  height: 300px;
+  height: 45vmin;
   width: 100%;
 }
 .post .post-img img {

@@ -59,7 +59,14 @@ a.viewprofile {
   justify-content: center;
   align-items: center;
 }
-a:hover {
+a.viewprofile :hover {
   filter: brightness(120%);
   scale: 105%;
+}
+
+a.viewprofile :visited {
+  color: black;
+}
+a.viewprofile {
+  color: black;
 }
