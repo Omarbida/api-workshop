@@ -1,44 +1,44 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   users: [],
   isLoading: false,
   isSuccess: false,
-  hasError: "",
-};
+  hasError: '',
+}
 
 const usersSlice = createSlice({
-  name: "usersSlice",
+  name: 'usersSlice',
   initialState,
   reducers: {
-    getUsers: (state, action) => {
-      state.isLoading = true;
+    getUsers: (state) => {
+      state.isLoading = true
     },
     setUsersSuccess: (state, { payload }) => {
-      state.users = payload;
-      state.isLoading = false;
-      state.isSuccess = true;
-      state.hasError = "";
+      state.users = payload
+      state.isLoading = false
+      state.isSuccess = true
+      state.hasError = ''
     },
     setUsersFail: (state, { payload }) => {
-      state.hasError = payload;
-      state.isLoading = false;
-      state.isSuccess = false;
+      state.hasError = payload
+      state.isLoading = false
+      state.isSuccess = false
     },
   },
-});
-export const { getUsers, setUsersSuccess, setUsersFail } = usersSlice.actions;
-export const usersReducer = usersSlice.reducer;
+})
+export const { getUsers, setUsersSuccess, setUsersFail } = usersSlice.actions
+export const usersReducer = usersSlice.reducer
 
 export const fetchUsers = () => {
   return async (dispatch, getState) => {
-    dispatch(getUsers());
+    dispatch(getUsers())
     try {
-      console.log(import.meta.env.VITE_BASE_API_URL);
-      const users = await fetch(import.meta.env.VITE_BASE_API_URL + "/users");
-      dispatch(setUsersSuccess(await users.json()));
+      console.log(import.meta.env.VITE_BASE_API_URL)
+      const users = await fetch(import.meta.env.VITE_BASE_API_URL + '/users')
+      dispatch(setUsersSuccess(await users.json()))
     } catch {
-      dispatch(setUsersFail("error"));
+      dispatch(setUsersFail('error'))
     }
-  };
-};
+  }
+}

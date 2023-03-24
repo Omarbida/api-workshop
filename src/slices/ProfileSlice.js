@@ -1,46 +1,49 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   userProfile: {},
   isLoading: false,
   isSuccess: false,
-  hasError: "",
-};
+  hasError: '',
+}
 const userProfileSlice = createSlice({
-  name: "userProfileSlice",
+  name: 'userProfileSlice',
   initialState,
   reducers: {
-    getUserProfile: (state, action) => {
-      state.isLoading = true;
+    getUserProfile: (state) => {
+      state.isLoading = true
     },
     getUserProfileSuccess: (state, { payload }) => {
-      state.userProfile = payload;
-      state.isLoading = false;
-      state.isSuccess = true;
-      state.hasError = "";
+      state.userProfile = payload
+      state.isLoading = false
+      state.isSuccess = true
+      state.hasError = ''
     },
     getUserProfileFail: (state, { payload }) => {
-      state.userProfile = {};
-      state.isLoading = false;
-      state.isSuccess = false;
-      state.hasError = payload;
+      state.userProfile = {}
+      state.isLoading = false
+      state.isSuccess = false
+      state.hasError = payload
     },
   },
-});
-export const { getUserProfile, getUserProfileSuccess, getUserProfileFail } =
-  userProfileSlice.actions;
-export const userProfileReducer = userProfileSlice.reducer;
+})
+export const {
+  getUserProfile,
+  getUserProfileSuccess,
+  getUserProfileFail,
+} = userProfileSlice.actions
+export const userProfileReducer = userProfileSlice.reducer
 
 export const fetchUserProfile = (id) => {
   return async (dispatch, getState) => {
-    dispatch(getUserProfile());
+    dispatch(getUserProfile())
     try {
       const userProfile = await fetch(
-        import.meta.env.VITE_BASE_API_URL + `/users/${id}`
-      );
-      dispatch(getUserProfileSuccess(await userProfile.json()));
+        import.meta.env.VITE_BASE_API_URL + `/users/${id}`,
+      )
+      dispatch(getUserProfileSuccess(await userProfile.json()))
     } catch (error) {
-      dispatch(getUserProfileFail(error.message));
+      dispatch(getUserProfileFail(error.message))
     }
-  };
-};
+  }
+}
